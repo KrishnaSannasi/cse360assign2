@@ -8,10 +8,16 @@ public class Calculator {
     private int total;
     
     /**
+     * Keeps track of the history of actions made by the calculator 
+     */
+    private StringBuffer history;
+    
+    /**
      * Makes a new calculator with an initial value of 0
      */
     public Calculator () {
         total = 0;  // not needed - included for clarity
+        history = new StringBuffer("0");
     }
     
     /**
@@ -29,6 +35,7 @@ public class Calculator {
      * @param <code>value</code>
      */
     public void add (int value) {
+        history.append(" + ").append(value);
         total += value;
     }
     
@@ -38,6 +45,7 @@ public class Calculator {
      * @param <code>value</code>
      */
     public void subtract (int value) {
+        history.append(" - ").append(value);
         total -= value;
     }
     
@@ -47,6 +55,7 @@ public class Calculator {
      * @param <code>value</code>
      */
     public void multiply (int value) {
+        history.append(" * ").append(value);
         total *= value;
     }
     
@@ -58,6 +67,7 @@ public class Calculator {
      * @param <code>value</code>
      */
     public void divide (int value) {
+        history.append(" / ").append(value);
         total /= value;
     }
     
@@ -67,6 +77,6 @@ public class Calculator {
      * @return history
      */
     public String getHistory () {
-        return "";
+        return history.toString();
     }
 }
