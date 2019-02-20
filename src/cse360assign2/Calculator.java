@@ -20,7 +20,7 @@ public class Calculator {
      * @return <code>total</code> value that has accumulated
      */
     public int getTotal () {
-        return 0;
+        return total;
     }
     
     /**
@@ -29,7 +29,7 @@ public class Calculator {
      * @param <code>value</code>
      */
     public void add (int value) {
-        
+        total += value;
     }
     
     /**
@@ -38,7 +38,7 @@ public class Calculator {
      * @param <code>value</code>
      */
     public void subtract (int value) {
-        
+        total -= value;
     }
     
     /**
@@ -47,7 +47,7 @@ public class Calculator {
      * @param <code>value</code>
      */
     public void multiply (int value) {
-        
+        total *= value;
     }
     
     /**
@@ -58,7 +58,7 @@ public class Calculator {
      * @param <code>value</code>
      */
     public void divide (int value) {
-        
+        total /= value;
     }
     
     /**
